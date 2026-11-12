@@ -1,43 +1,49 @@
 <p align="center">
-  <img src="./assets/devlink-logo.png" alt="DevLink" width="480">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/devlink-logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/devlink-logo.png">
+    <img src="./assets/devlink-logo.png" alt="DevLink" width="480">
+  </picture>
 </p>
 
 # DevLink
 
-**팀원들의 AI 코딩 도구를 연결하는 개발 협업 플랫폼**
+[English](./README.md) | [한국어](./README.ko.md)
 
-DevLink는 서로 다른 AI 코딩 도구를 사용하는 팀원들의 Agent를 연결합니다. 자신의 AI 코딩 도구에서 팀원의 Agent에게 작업을 요청하고, 진행 상태와 결과를 공유할 수 있습니다.
+**A developer collaboration platform that connects your team's AI coding tools.**
+
+DevLink connects agents across the AI coding tools your teammates use. Request work from a teammate's agent directly from your own AI coding tool, then share progress and results.
 
 [Related Repositories](#related-repositories) · [Connect With Us](#connect-with-us) · [Contribute](#contribute)
 
-> 현재 개발 중인 프로젝트입니다. 설치·실행 방법과 지원 범위는 각 저장소의 README에서 확인해 주세요.
+> DevLink is under active development. See each repository's README for setup instructions and supported features.
 
 ## How It Works
 
-1. **작업 요청** — 자신의 AI 코딩 도구에서 팀원의 Agent에게 요청과 필요한 맥락을 전달합니다.
-2. **담당자 확인** — 요청을 받은 담당자가 내용을 확인하고 수락합니다.
-3. **작업과 결과 공유** — 담당자의 Agent가 로컬 프로젝트에서 작업하고, 요청자는 진행 상태와 결과를 확인합니다.
+1. **Request work** — Send a request and the relevant context to a teammate's agent from your AI coding tool.
+2. **Review the request** — The teammate reviews and accepts the request.
+3. **Work and share results** — Their agent works in their local project, while you follow progress and review the results.
 
 ## Related Repositories
 
-DevLink는 클라이언트, 중앙 서버, 웹 관리 화면으로 구성됩니다. 시작하려면 [DevLink_client](https://github.com/SSAFY-URAYAHA/DevLink_client)의 README를 확인해 주세요.
+DevLink consists of a client, a central server, and a web dashboard. To get started, see the [DevLink_client](https://github.com/SSAFY-URAYAHA/DevLink_client) README.
 
-| Repository | 역할 | 주요 기술 |
+| Repository | Role | Tech Stack |
 | --- | --- | --- |
-| [DevLink_client](https://github.com/SSAFY-URAYAHA/DevLink_client) | 개발자 PC에서 AI 코딩 도구와 중앙 서버를 연결하는 CLI·로컬 브로커·MCP 서버 | Rust, TypeScript |
-| [DevLink_server](https://github.com/SSAFY-URAYAHA/DevLink_server) | 사용자·팀·Agent의 인증과 권한, 작업 상태·결과 저장, 실시간 요청 전달을 담당하는 중앙 서버 | Java, Spring Boot, PostgreSQL |
-| [DevLink_frontend](https://github.com/SSAFY-URAYAHA/DevLink_frontend) | 계정·팀·Agent를 등록하고 관리하는 웹 화면 | React, TypeScript, Vite |
+| [DevLink_client](https://github.com/SSAFY-URAYAHA/DevLink_client) | CLI, local broker, and MCP server that connect AI coding tools on a developer's machine to the central server | Rust, TypeScript |
+| [DevLink_server](https://github.com/SSAFY-URAYAHA/DevLink_server) | Central server for user, team, and agent authentication and authorization, task state and result storage, and real-time request delivery | Java, Spring Boot, PostgreSQL |
+| [DevLink_frontend](https://github.com/SSAFY-URAYAHA/DevLink_frontend) | Web dashboard for registering and managing accounts, teams, and agents | React, TypeScript, Vite |
 
-각 저장소의 README에서 해당 구성요소의 설치·실행 방법과 개발 문서를 확인할 수 있습니다.
+Each repository's README provides setup instructions and development documentation for that component.
 
 ## Connect With Us
 
-DevLink 팀에 궁금한 점이나 협업 제안이 있다면 이메일로 연락해 주세요.
+Have a question or a collaboration proposal? Reach out to the DevLink team by email.
 
 📧 [mhroh075@gmail.com](mailto:mhroh075@gmail.com)
 
 ## Contribute
 
-버그 제보, 문서 수정, 기능 제안, 코드 기여를 환영합니다.
+We welcome bug reports, documentation updates, feature suggestions, and code contributions.
 
-기여 방법과 진행 절차는 [CONTRIBUTING.md](https://github.com/SSAFY-URAYAHA/DevLink_server/blob/develop/CONTRIBUTING.md)를 참고해 주세요.
+See [CONTRIBUTING.md](https://github.com/SSAFY-URAYAHA/DevLink_server/blob/develop/CONTRIBUTING.md) for contribution guidelines and the contribution process.
