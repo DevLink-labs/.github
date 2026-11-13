@@ -36,6 +36,12 @@ DevLink consists of a client, a central server, and a web dashboard. To get star
 
 Each repository's README provides setup instructions and development documentation for that component.
 
+## Getting Started
+
+New to DevLink? Follow our guide to install DevLink, connect your AI coding tool, send your first task, and review the results.
+
+👉 [User Guide](https://github.com/SSAFY-URAYAHA/.github/blob/main/docs/DevLink_User_Guide.en.md)
+
 ## Connect With Us
 
 Have a question or a collaboration proposal? Reach out to the DevLink team by email.

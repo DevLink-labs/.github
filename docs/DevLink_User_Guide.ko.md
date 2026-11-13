@@ -1,10 +1,6 @@
 # DevLink 사용설명서
 
-처음 사용하는 사람을 위한 가입·프로젝트 연결·첫 협업 안내
-
-작성 기준: 2026년 11월 13일 · Windows 데스크톱 앱 중심
-
-> 이 문서는 로컬의 DevLink_client, DevLink_server, DevLink_frontend 소스와 각 저장소의 안내 문서를 대조해 작성했습니다. 설치 파일의 실제 배포 여부와 운영 서비스의 현재 정상 동작은 확인하지 못했습니다. 화면이나 설치본에 일부 기능이 없다면 해당 절의 대체 경로를 사용하세요. 이 문서를 작성하면서 실제 계정을 만들거나 작업을 전송하지는 않았습니다.
+[English](DevLink_User_Guide.en.md) · **한국어** 
 
 ## 목차
 
@@ -20,8 +16,6 @@
 10. [막혔을 때 해결하기](#10-막혔을-때-해결하기)
 11. [CLI로 직접 연결하기](#11-cli로-직접-연결하기)
 12. [server·frontend·client를 모두 로컬에서 실행하기](#12-serverfrontendclient를-모두-로컬에서-실행하기)
-13. [첫 사용 완료 체크리스트](#13-첫-사용-완료-체크리스트)
-14. [구현 확인 자료](#14-구현-확인-자료)
 
 ## 1. DevLink로 할 수 있는 일
 
@@ -688,35 +682,5 @@ DEVLINK_DESKTOP_CONFIG_PATH=C:/Users/YOUR_USER/devlink-desktop-local/config.json
 | server·DB | server 폴더에서 `docker compose down` | `docker compose up -d` |
 
 기본 `docker compose down`은 DB 볼륨을 유지합니다. `-v`를 붙이면 로컬 DB 데이터가 삭제될 수 있으므로 일반 종료에는 사용하지 않습니다.
-
-## 13. 첫 사용 완료 체크리스트
-
-- [ ] DevLink에 가입하고 로그인했다.
-- [ ] 팀을 만들거나 초대 코드로 참여했다.
-- [ ] 팀원과 같은 팀인지 확인했다.
-- [ ] 내 프로젝트 폴더와 사용할 AI 도구를 연결했다.
-- [ ] AI 도구를 다시 열고 MCP 연결과 내 Agent 정보를 확인했다.
-- [ ] 상대 Agent 이름·ID·접속 상태를 확인했다.
-- [ ] 코드 수정 없는 첫 작업을 보내고 taskId를 확인했다.
-- [ ] 수신자가 작업을 읽고 수락한 뒤 자신의 AI 도구에서 진행했다.
-- [ ] 완료 결과가 저장됐다.
-- [ ] 요청자의 AI 도구와 DevLink 화면에서 같은 결과를 확인했다.
-
-## 14. 구현 확인 자료
-
-문서에 적은 사용 순서는 아래 로컬 소스·문서를 함께 대조했습니다. 원격 링크의 브랜치·배포본은 로컬 확인 시점과 다를 수 있습니다.
-
-| 영역 | 확인 자료 |
-| --- | --- |
-| client 설치와 프로필 | `DevLink_client/rust/README.md`, `rust/docs/setup.md` |
-| MCP 연결 진단·세션 연결 | `DevLink_client/packages/mcp-server/docs/onboarding.md` |
-| 작업 요청·수락·질문·결과 | `DevLink_client/packages/mcp-server/docs/agent-workflow.md` |
-| AI 도구 알림 훅 | `DevLink_client/rust/docs/update-hook.md` |
-| server 실행·주소·환경 변수 | `DevLink_server/README.ko.md`, `.env.example`, `docker-compose.yml`, `docs/server-guide.ko.md` |
-| 웹 수락 권한과 상태 전이 | `DevLink_server/.../controller/WebTaskController.java`, `.../service/TaskStatusService.java` |
-| frontend 실행·프록시 | `DevLink_frontend/README.ko.md`, `docs/frontend-guide.md`, `.env.example` |
-| 가입·온보딩·프로젝트 연결 | `src/features/auth/components/AuthPanel.tsx`, `src/pages/OnboardingPage.tsx`, `src/features/desktop-setup/components/ProjectConnectView.tsx` |
-| 상태 표시와 수락 버튼 | `src/features/tasks/utils/taskPresentation.ts`, `src/features/tasks/components/TaskConversationView.tsx` |
-| 설치본·연결 재개·로컬 개발 | `DevLink_frontend/desktop/README.md`, `desktop/docs/development.ko.md`, `desktop/.env.example` |
 
 관련 저장소: [Client](https://github.com/SSAFY-URAYAHA/DevLink_client) · [Server](https://github.com/SSAFY-URAYAHA/DevLink_server) · [Frontend](https://github.com/SSAFY-URAYAHA/DevLink_frontend)

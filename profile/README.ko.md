@@ -36,6 +36,12 @@ DevLink는 클라이언트, 중앙 서버, 웹 관리 화면으로 구성됩니�
 
 각 저장소의 README에서 해당 구성요소의 설치·실행 방법과 개발 문서를 확인할 수 있습니다.
 
+## 시작하기
+
+설치부터 AI 도구 연결, 첫 작업 요청과 결과 확인까지 안내합니다.
+
+👉 [사용설명서](https://github.com/SSAFY-URAYAHA/.github/blob/main/docs/DevLink_User_Guide.ko.md)
+
 ## Connect With Us
 
 DevLink 팀에 궁금한 점이나 협업 제안이 있다면 이메일로 연락해 주세요.
