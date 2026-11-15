@@ -101,20 +101,22 @@ To start in a browser, open [DevLink Web](https://devlink.ai.kr). Accounts and t
 
 ### If you are creating the team
 
-1. Choose the option to create a new team in the onboarding screen.
-2. Enter a team name, such as `First Collaboration Team`, and create it.
-3. Copy the **invitation code (초대 코드)** shown after creation and share it with your teammate.
+1. Open **Team management (팀 관리)** and select **Create team (팀 만들기)**.
+2. Enter a team name and select **Create team**. DevLink makes you the team owner and issues the first invitation code automatically.
+3. In the **Team created (팀 생성 완료)** dialog, select **Copy code (코드 복사)**. Share the invitation code so your teammates can join the team.
 
-The team creator becomes its OWNER. An invitation code lets someone join the team; it is separate from an Agent connection token.
+![Creating a team in Team management and copying its invitation code](./image/part1.webp)
+
+If you are on the onboarding screen, choose **Create a new team (새 팀 만들기)**. You can copy the first invitation code during onboarding too.
 
 ### If you have been invited
 
 1. Log in with your own account.
-2. Choose the option to join a team.
-3. Enter the invitation code provided by your teammate.
+2. In **Team management**, select **Join with code (코드로 참여)**. On the onboarding screen, choose **초대 코드로 참여**.
+3. Enter the invitation code from your teammate and confirm to join.
 4. Check the name of the team you joined.
 
-If you are already on the dashboard, use team management to create or join a team. If you belong to multiple teams, **select the team you intend to work with first**.
+If you belong to multiple teams, **select the team you intend to work with first**.
 
 **Expected result:** Both users see the same team, and each person's account appears in the team member list.
 
@@ -122,22 +124,25 @@ If you regenerate an invitation code, review the on-screen notice and share the 
 
 ## 5. Connect your project and AI tool
 
-Both users complete this section on their own computers. Select an existing local folder where you intend to work.
+Each teammate completes this section in the DevLink desktop app on their own computer.
 
 ### 5-1. Select a project
 
-1. For first-time setup, continue with **Connect project (프로젝트 연결)**.
-2. From the dashboard, select **Agent → Add Agent (Agent 추가)**.
-3. Select the **project root folder**. For a frontend project, for example, choose the folder containing `package.json` and `src`.
+1. In **Agent management (Agent 관리)**, select **Add agent (Agent 추가)**. If you are on the onboarding screen, continue to **Connect project (프로젝트 연결)**.
+2. Click **Select folder (폴더 선택)** and choose the local project root you want to work in. For a frontend project, this might be the folder containing `package.json` and `src`.
 
-If you chose **Set up later (나중에 설정)** during onboarding, return through Add Agent when ready.
+![Opening Add agent and starting folder selection with Select folder](./image/part2.webp)
+
+If you chose **Set up later (나중에 설정)** during onboarding, you can return to **Add agent** when ready.
 
 ### 5-2. Select a tool and responsibilities
 
-1. Select Codex or Claude Code. A tool may be selected automatically if only one is detected.
-2. Select a discipline: Frontend / Backend / Infrastructure / Other.
-3. Enter role tags, such as `login, authentication, API`.
-4. Click **Connect (연결하기)**.
+1. Select **Codex** or **Claude Code**. If DevLink detects only one tool, it selects it automatically.
+2. Under **Area of responsibility (담당 파트)**, select **Frontend**, **Backend**, **Infrastructure**, or **Other**.
+3. Enter **Role tags (역할 태그)**, such as `login, authentication, API`.
+4. Click **Connect (연결하기)**. DevLink registers the Agent and automatically configures MCP for the selected project. If the app prompts for your password or asks you to review settings, follow section 5-3. Once setup is complete, use section 5-4 to bring the Agent online.
+
+![Selecting Codex, choosing an area of responsibility, entering role tags, and starting automatic setup](./image/part3.webp)
 
 Role tags are comma-separated, with up to 10 tags and 64 characters per tag. Describe the features you actually own, since these tags help identify the right Agent later.
 
@@ -161,10 +166,13 @@ Preserve other MCP servers and settings already present in these files. Add or u
 
 ### 5-4. Reopen your AI tool and verify the connection
 
-1. Reopen **the same project** in Codex or Claude Code after applying settings.
-2. If Codex asks whether you trust the folder, confirm that it is the intended project and trust it.
-3. If Claude Code asks to use the DevLink MCP server, approve it.
-4. Enter this prompt in your AI tool:
+In **Agent management**, find the offline Codex Agent you set up on this PC and select **Connect on this PC (이 PC에서 연결)**. The desktop app starts the local broker and opens the saved project in Codex. If Codex asks you to approve the DevLink connection, approve it in the terminal. Check that the Agent status changes to **Online (온라인)**.
+
+![Selecting Connect on this PC and watching the Codex Agent go online](./image/part4.webp)
+
+For Claude Code or when the button is unavailable, open **the same project** in your AI tool. If Codex asks whether to trust the folder, confirm it is the intended project before granting trust. If Claude Code asks to use the DevLink MCP server, approve it.
+
+To check the connection and bind the session if needed, enter this prompt in your AI tool.
 
 ```text
 Check my DevLink connection.
